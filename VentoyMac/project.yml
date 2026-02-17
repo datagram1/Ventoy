@@ -1,0 +1,96 @@
+name: VentoyMac
+options:
+  bundleIdPrefix: KNWS
+  deploymentTarget:
+    macOS: "13.0"
+  createIntermediateGroups: true
+  generateEmptyDirectories: false
+
+settings:
+  base:
+    MACOSX_DEPLOYMENT_TARGET: "13.0"
+
+targets:
+  VentoyMac:
+    type: application
+    platform: macOS
+    sources:
+      - path: VentoyMac
+        excludes:
+          - "Resources/**"
+          - "Core/FatIO/build_fatio.sh"
+          - "Core/FatIO/libfat_io.a"
+          - "Core/FatIO/*.o"
+          - "**/.DS_Store"
+    postCompileScripts:
+      - name: Copy Boot Assets
+        script: |
+          rsync -a --exclude .DS_Store "${SRCROOT}/VentoyMac/Resources/ventoy_boot" "${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/"
+        basedOnDependencyAnalysis: false
+    settings:
+      base:
+        INFOPLIST_FILE: VentoyMac/App/Info.plist
+        CODE_SIGN_ENTITLEMENTS: VentoyMac/App/VentoyMac.entitlements
+        PRODUCT_BUNDLE_IDENTIFIER: KNWS.VentoyMac
+        DEVELOPMENT_TEAM: LZ7T6LSFQ5
+        CODE_SIGN_IDENTITY: "Apple Development"
+        CODE_SIGN_STYLE: Automatic
+        ARCHS: "arm64 x86_64"
+        OTHER_CFLAGS: "$(inherited) -D_FILE_OFFSET_BITS=64 -DVENTOY_MAC_BUILD"
+        HEADER_SEARCH_PATHS:
+          - "$(inherited)"
+          - "$(SRCROOT)/VentoyMac/Core/FatIO/include"
+          - "$(SRCROOT)/VentoyMac/Core/Platform"
+          - "$(SRCROOT)/VentoyMac/Core/Ventoy"
+          - "$(SRCROOT)/VentoyMac/Bridge/Types"
+          - "$(SRCROOT)/VentoyMac/Bridge/Monitor"
+          - "$(SRCROOT)/VentoyMac/Bridge/Operations"
+          - "$(SRCROOT)/VentoyMac/Bridge/Core"
+          - "$(SRCROOT)/VentoyMac/GUI"
+          - "$(SRCROOT)/VentoyMac/App"
+        CLANG_ENABLE_OBJC_ARC: YES
+        CLANG_ENABLE_MODULES: YES
+        GCC_C_LANGUAGE_STANDARD: c11
+        ENABLE_HARDENED_RUNTIME: YES
+        COMBINE_HIDPI_IMAGES: YES
+      configs:
+        Debug:
+          DEBUG_INFORMATION_FORMAT: "dwarf-with-dsym"
+          GCC_OPTIMIZATION_LEVEL: "0"
+          GCC_PREPROCESSOR_DEFINITIONS:
+            - "DEBUG=1"
+            - "$(inherited)"
+          MTL_ENABLE_DEBUG_INFO: INCLUDE_SOURCE
+        Release:
+          DEBUG_INFORMATION_FORMAT: "dwarf-with-dsym"
+          GCC_OPTIMIZATION_LEVEL: s
+          COPY_PHASE_STRIP: YES
+    dependencies:
+      - sdk: DiskArbitration.framework
+      - sdk: IOKit.framework
+      - sdk: Security.framework
+
+  VentoyMacTests:
+    type: bundle.unit-test
+    platform: macOS
+    sources:
+      - path: VentoyMacTests
+    settings:
+      base:
+        INFOPLIST_FILE: VentoyMacTests/Info.plist
+        PRODUCT_BUNDLE_IDENTIFIER: KNWS.VentoyMacTests
+        CODE_SIGN_STYLE: Automatic
+        DEVELOPMENT_TEAM: LZ7T6LSFQ5
+        HEADER_SEARCH_PATHS:
+          - "$(inherited)"
+          - "$(SRCROOT)/VentoyMac/Core/FatIO/include"
+          - "$(SRCROOT)/VentoyMac/Core/Platform"
+          - "$(SRCROOT)/VentoyMac/Core/Ventoy"
+          - "$(SRCROOT)/VentoyMac/Bridge/Types"
+          - "$(SRCROOT)/VentoyMac/Bridge/Monitor"
+          - "$(SRCROOT)/VentoyMac/Bridge/Operations"
+          - "$(SRCROOT)/VentoyMac/Bridge/Core"
+          - "$(SRCROOT)/VentoyMac/GUI"
+          - "$(SRCROOT)/VentoyMac/App"
+    dependencies:
+      - target: VentoyMac

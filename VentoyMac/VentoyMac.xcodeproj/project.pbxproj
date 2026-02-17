@@ -1,0 +1,808 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		02BFC5CD9A424769CD0A07F3 /* fat_table.c in Sources */ = {isa = PBXBuildFile; fileRef = 909EFB7631E3AC8AFE7BA30A /* fat_table.c */; };
+		099F77279DB4F28824FA0A88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AAEEB251479B26B62D8DF9C /* Assets.xcassets */; };
+		1E0AB606F282E34DEC789E4D /* fat_format.c in Sources */ = {isa = PBXBuildFile; fileRef = F24624D436A1B72FF8A08336 /* fat_format.c */; };
+		22E3407E3413A75B6E08580D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 867C095B7BA2E4A53E95F430 /* main.m */; };
+		231D75AE7B623CE6EF4F2564 /* fat_access.c in Sources */ = {isa = PBXBuildFile; fileRef = 68221256428996D2BFE5A609 /* fat_access.c */; };
+		41F10584A64CDD3FE53DA6A8 /* fat_cache.c in Sources */ = {isa = PBXBuildFile; fileRef = A755FDED9C87B73C25D1B044 /* fat_cache.c */; };
+		4690D80CD578F4562FEC6A62 /* VTPartitionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C17F7FDD12BA5D361990C5E0 /* VTPartitionTests.m */; };
+		511EB7A751C9ADDCD47410BD /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7238DB4733628D1776CB2AA /* IOKit.framework */; };
+		538FCE3B8737140C6D449243 /* vtoygpt.c in Sources */ = {isa = PBXBuildFile; fileRef = F01639446F9A175638B1D643 /* vtoygpt.c */; };
+		5E5265816D6D55AFB2D519EA /* vtoy_darwin.c in Sources */ = {isa = PBXBuildFile; fileRef = 92FBCD5E93E67FE70AC2909A /* vtoy_darwin.c */; };
+		6298A683746C116E5AF2BB15 /* fat_write.c in Sources */ = {isa = PBXBuildFile; fileRef = 7B7529AF1F2739B824DB9A0D /* fat_write.c */; };
+		67E160351A1FBEEE8FBED519 /* VTBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = E3BB10F5F69147769053E7B5 /* VTBridge.m */; };
+		74F835FF6298B132730124A0 /* VTPrivilegedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 882E943E23564BA7D255F075 /* VTPrivilegedTask.m */; };
+		7D991320DECF64BE6A273094 /* fat_string.c in Sources */ = {isa = PBXBuildFile; fileRef = B4800099737538A6D9A47E1C /* fat_string.c */; };
+		7FE011C9DF3834A03BCA9DD4 /* VTDiskOperations.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A87D1BD0BD00DDF8ADDEC43 /* VTDiskOperations.m */; };
+		8154BDB14247AE6A073679F0 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACD07562352CBA614F56042C /* Security.framework */; };
+		8428E96E5C0E9B41240C5DD6 /* VTBridgeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 678EE307AB6213CBA3604A45 /* VTBridgeTests.m */; };
+		8FC4D21A08924AFB8C7B0BDF /* vtoycli.c in Sources */ = {isa = PBXBuildFile; fileRef = A6A4415BA5EADED70B56A130 /* vtoycli.c */; };
+		8FE5A08484D19A33C6E23734 /* crc32.c in Sources */ = {isa = PBXBuildFile; fileRef = A306F694EB64AC2A24D85C0E /* crc32.c */; };
+		916CB9DCCAD628D20CF7A1CC /* DiskArbitration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE655FEAC30B7FCF974B15B6 /* DiskArbitration.framework */; };
+		9A9E980204ED1B33E40D08DE /* VTDiskMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = F6922E7F5F9165ED2B4061F9 /* VTDiskMonitor.m */; };
+		A249A89713A44C2CE411AF7A /* vtoy_xz.c in Sources */ = {isa = PBXBuildFile; fileRef = C738B740E0A8F27B69588C96 /* vtoy_xz.c */; };
+		A49DE5E9BA2AF4DF028FFA02 /* partresize.c in Sources */ = {isa = PBXBuildFile; fileRef = BF3E010AF511ED65FE5744C5 /* partresize.c */; };
+		A52223FC935289B7E32010BD /* fat_filelib.c in Sources */ = {isa = PBXBuildFile; fileRef = 0C2A4547E0FB7477808B8527 /* fat_filelib.c */; };
+		B290DAE52923552886288BCA /* vtoyfat.c in Sources */ = {isa = PBXBuildFile; fileRef = 0ABDE213222DE05E59331CDB /* vtoyfat.c */; };
+		B292571B814CD680CBA5CBBA /* MainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7691A5EA23E8A415A91A7E7 /* MainWindowController.m */; };
+		D32326D75921BC73C458D631 /* fat_misc.c in Sources */ = {isa = PBXBuildFile; fileRef = F6794F49A182B7B368370E66 /* fat_misc.c */; };
+		DD8D510A1B226E7BEE8BC990 /* VTDiskSafetyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 063E74824631577C3A006108 /* VTDiskSafetyTests.m */; };
+		EBBE05398A8312FE0C03C5F7 /* VTLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 26C575FC5590EE71A6FC3A93 /* VTLog.m */; };
+		F1755F9AFE34186751E93728 /* VTTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = FA880F52CC221E1FC12470B9 /* VTTypes.m */; };
+		F8754BED9AD3B05EBC0DE81E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6A4C0CAC3C3C51F012F850 /* AppDelegate.m */; };
+		FE5A8F819333B98583C76906 /* VTDriveCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B2848FF36A646C3ABC27EFF /* VTDriveCell.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FE35F3673135D1E547BCE573 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7BF3790D3A18A94EE4695D8B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0D4B3291B0D48726DBD1A668;
+			remoteInfo = VentoyMac;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		063E74824631577C3A006108 /* VTDiskSafetyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VTDiskSafetyTests.m; sourceTree = "<group>"; };
+		0ABDE213222DE05E59331CDB /* vtoyfat.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = vtoyfat.c; sourceTree = "<group>"; };
+		0C2A4547E0FB7477808B8527 /* fat_filelib.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fat_filelib.c; sourceTree = "<group>"; };
+		10A5C742B3AE013AAD01E465 /* fat_defs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fat_defs.h; sourceTree = "<group>"; };
+		1EF8DC62FAB3EC6465FB379F /* VentoyMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VentoyMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		21967CA2966CF9057ABDF84E /* fat_cache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fat_cache.h; sourceTree = "<group>"; };
+		26C575FC5590EE71A6FC3A93 /* VTLog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VTLog.m; sourceTree = "<group>"; };
+		27BF86BEED6C20910ECD4288 /* fat_misc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fat_misc.h; sourceTree = "<group>"; };
+		2909353D9A36B74052D1AEB4 /* fat_types.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fat_types.h; sourceTree = "<group>"; };
+		2A87D1BD0BD00DDF8ADDEC43 /* VTDiskOperations.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VTDiskOperations.m; sourceTree = "<group>"; };
+		3A4F592B0EA63BF6602C8F7E /* vtoy_xz.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = vtoy_xz.h; sourceTree = "<group>"; };
+		3B2848FF36A646C3ABC27EFF /* VTDriveCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VTDriveCell.m; sourceTree = "<group>"; };
+		3C8B8E437C0C95CDC0104B8C /* VTDriveCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VTDriveCell.h; sourceTree = "<group>"; };
+		4AAEEB251479B26B62D8DF9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4BB5928BF1B3A3DCF73DAD55 /* fat_list.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fat_list.h; sourceTree = "<group>"; };
+		678EE307AB6213CBA3604A45 /* VTBridgeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VTBridgeTests.m; sourceTree = "<group>"; };
+		68221256428996D2BFE5A609 /* fat_access.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fat_access.c; sourceTree = "<group>"; };
+		6CF5A5D7353CB3C5383C9CC6 /* VTBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VTBridge.h; sourceTree = "<group>"; };
+		7213C8195202E3E73016BE55 /* VTDiskMonitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VTDiskMonitor.h; sourceTree = "<group>"; };
+		73ED625BAA9C4B44FB947B51 /* fat_table.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fat_table.h; sourceTree = "<group>"; };
+		7B7529AF1F2739B824DB9A0D /* fat_write.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fat_write.c; sourceTree = "<group>"; };
+		867C095B7BA2E4A53E95F430 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		882E943E23564BA7D255F075 /* VTPrivilegedTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VTPrivilegedTask.m; sourceTree = "<group>"; };
+		891EEFFB529552A368F5C2F5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8F65B8DB3D5109A351136E13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		909EFB7631E3AC8AFE7BA30A /* fat_table.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fat_table.c; sourceTree = "<group>"; };
+		91F7D2987CD211D0F8B5008D /* VentoyMacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VentoyMacTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		92FBCD5E93E67FE70AC2909A /* vtoy_darwin.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = vtoy_darwin.c; sourceTree = "<group>"; };
+		94857A69131F535501F7EBAB /* fat_opts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fat_opts.h; sourceTree = "<group>"; };
+		A306F694EB64AC2A24D85C0E /* crc32.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = crc32.c; sourceTree = "<group>"; };
+		A3EF9E4A1942BC90E30F2789 /* VTLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VTLog.h; sourceTree = "<group>"; };
+		A6A4415BA5EADED70B56A130 /* vtoycli.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = vtoycli.c; sourceTree = "<group>"; };
+		A755FDED9C87B73C25D1B044 /* fat_cache.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fat_cache.c; sourceTree = "<group>"; };
+		AC6648105480BBDD02A4EBB3 /* fat_write.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fat_write.h; sourceTree = "<group>"; };
+		ACD07562352CBA614F56042C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		AF082ED93E6240B63EE6FC16 /* fat_string.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fat_string.h; sourceTree = "<group>"; };
+		B4800099737538A6D9A47E1C /* fat_string.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fat_string.c; sourceTree = "<group>"; };
+		B63044E9C6F06767D883039D /* vtoy_darwin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = vtoy_darwin.h; sourceTree = "<group>"; };
+		BC6A4C0CAC3C3C51F012F850 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BE655FEAC30B7FCF974B15B6 /* DiskArbitration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DiskArbitration.framework; path = System/Library/Frameworks/DiskArbitration.framework; sourceTree = SDKROOT; };
+		BEDF05AD47EB2141FFBAE2FD /* VTTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VTTypes.h; sourceTree = "<group>"; };
+		BF3E010AF511ED65FE5744C5 /* partresize.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = partresize.c; sourceTree = "<group>"; };
+		BF418AE43864F489A103DBA6 /* fat_format.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fat_format.h; sourceTree = "<group>"; };
+		C17F7FDD12BA5D361990C5E0 /* VTPartitionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VTPartitionTests.m; sourceTree = "<group>"; };
+		C5C1835563193F53BFFEEE7C /* VTDiskOperations.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VTDiskOperations.h; sourceTree = "<group>"; };
+		C738B740E0A8F27B69588C96 /* vtoy_xz.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = vtoy_xz.c; sourceTree = "<group>"; };
+		C7691A5EA23E8A415A91A7E7 /* MainWindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainWindowController.m; sourceTree = "<group>"; };
+		D56389ABB6CAAB49C5C826BA /* vtoycli.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = vtoycli.h; sourceTree = "<group>"; };
+		DF79EB03F717B9E495F531DB /* VentoyMac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VentoyMac.entitlements; sourceTree = "<group>"; };
+		E3BB10F5F69147769053E7B5 /* VTBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VTBridge.m; sourceTree = "<group>"; };
+		E9330D4B1632157E421AF2B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		EE21DD8DB8250B9B09D3DFF7 /* VTPrivilegedTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VTPrivilegedTask.h; sourceTree = "<group>"; };
+		EF61904CAF75CDA6B70533D3 /* fat_filelib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fat_filelib.h; sourceTree = "<group>"; };
+		F0091BC45119AF25D2D3E8B1 /* MainWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainWindowController.h; sourceTree = "<group>"; };
+		F01639446F9A175638B1D643 /* vtoygpt.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = vtoygpt.c; sourceTree = "<group>"; };
+		F24624D436A1B72FF8A08336 /* fat_format.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fat_format.c; sourceTree = "<group>"; };
+		F60D4A2943933F6D06AA2751 /* fat_access.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fat_access.h; sourceTree = "<group>"; };
+		F6794F49A182B7B368370E66 /* fat_misc.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fat_misc.c; sourceTree = "<group>"; };
+		F6922E7F5F9165ED2B4061F9 /* VTDiskMonitor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VTDiskMonitor.m; sourceTree = "<group>"; };
+		F7238DB4733628D1776CB2AA /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		FA880F52CC221E1FC12470B9 /* VTTypes.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VTTypes.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2A0C31A54673CA2054DAD6D5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				916CB9DCCAD628D20CF7A1CC /* DiskArbitration.framework in Frameworks */,
+				511EB7A751C9ADDCD47410BD /* IOKit.framework in Frameworks */,
+				8154BDB14247AE6A073679F0 /* Security.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0D5B8336B44D5A1CF77ABC7D /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				F56A65C70E9028F23306BDA2 /* FatIO */,
+				EBF720D50141A7E317D95216 /* Platform */,
+				EDC0A4150F1A213668567508 /* Ventoy */,
+				E6F8C9D817AC7BA3398B3DFC /* XZ */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		1475C052EBCF97038079C6A7 /* VentoyMac */ = {
+			isa = PBXGroup;
+			children = (
+				C1C349136EF862D67ABBAF52 /* App */,
+				6D6DE7467FAD15E5AAC001CF /* Assets */,
+				9578F8EDE2EDFC4D88EBD5F8 /* Bridge */,
+				0D5B8336B44D5A1CF77ABC7D /* Core */,
+				F31518FA932985934195CB76 /* GUI */,
+			);
+			path = VentoyMac;
+			sourceTree = "<group>";
+		};
+		2FD16B8C503595AEA9C60BC7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1EF8DC62FAB3EC6465FB379F /* VentoyMac.app */,
+				91F7D2987CD211D0F8B5008D /* VentoyMacTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		591A7A9EED42BEF761D25E1E = {
+			isa = PBXGroup;
+			children = (
+				1475C052EBCF97038079C6A7 /* VentoyMac */,
+				619A14603435A19B0E40747B /* VentoyMacTests */,
+				A5124B2D8F3D004398E15424 /* Frameworks */,
+				2FD16B8C503595AEA9C60BC7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		619A14603435A19B0E40747B /* VentoyMacTests */ = {
+			isa = PBXGroup;
+			children = (
+				8F65B8DB3D5109A351136E13 /* Info.plist */,
+				678EE307AB6213CBA3604A45 /* VTBridgeTests.m */,
+				063E74824631577C3A006108 /* VTDiskSafetyTests.m */,
+				C17F7FDD12BA5D361990C5E0 /* VTPartitionTests.m */,
+			);
+			path = VentoyMacTests;
+			sourceTree = "<group>";
+		};
+		6BE06642D3E3771D3CADC97B /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				C5C1835563193F53BFFEEE7C /* VTDiskOperations.h */,
+				2A87D1BD0BD00DDF8ADDEC43 /* VTDiskOperations.m */,
+				EE21DD8DB8250B9B09D3DFF7 /* VTPrivilegedTask.h */,
+				882E943E23564BA7D255F075 /* VTPrivilegedTask.m */,
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
+		6D6DE7467FAD15E5AAC001CF /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				4AAEEB251479B26B62D8DF9C /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		6EB6D7A6EA5194B48C1A7D41 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				F60D4A2943933F6D06AA2751 /* fat_access.h */,
+				21967CA2966CF9057ABDF84E /* fat_cache.h */,
+				10A5C742B3AE013AAD01E465 /* fat_defs.h */,
+				EF61904CAF75CDA6B70533D3 /* fat_filelib.h */,
+				BF418AE43864F489A103DBA6 /* fat_format.h */,
+				4BB5928BF1B3A3DCF73DAD55 /* fat_list.h */,
+				27BF86BEED6C20910ECD4288 /* fat_misc.h */,
+				94857A69131F535501F7EBAB /* fat_opts.h */,
+				AF082ED93E6240B63EE6FC16 /* fat_string.h */,
+				73ED625BAA9C4B44FB947B51 /* fat_table.h */,
+				2909353D9A36B74052D1AEB4 /* fat_types.h */,
+				AC6648105480BBDD02A4EBB3 /* fat_write.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		71E56C003F86A85384528DC0 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				BEDF05AD47EB2141FFBAE2FD /* VTTypes.h */,
+				FA880F52CC221E1FC12470B9 /* VTTypes.m */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
+		9578F8EDE2EDFC4D88EBD5F8 /* Bridge */ = {
+			isa = PBXGroup;
+			children = (
+				C3E524811788963B729195E8 /* Core */,
+				F4415B8B891A5FF61C91EEC9 /* Monitor */,
+				6BE06642D3E3771D3CADC97B /* Operations */,
+				71E56C003F86A85384528DC0 /* Types */,
+			);
+			path = Bridge;
+			sourceTree = "<group>";
+		};
+		A5124B2D8F3D004398E15424 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BE655FEAC30B7FCF974B15B6 /* DiskArbitration.framework */,
+				F7238DB4733628D1776CB2AA /* IOKit.framework */,
+				ACD07562352CBA614F56042C /* Security.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C1C349136EF862D67ABBAF52 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				891EEFFB529552A368F5C2F5 /* AppDelegate.h */,
+				BC6A4C0CAC3C3C51F012F850 /* AppDelegate.m */,
+				E9330D4B1632157E421AF2B1 /* Info.plist */,
+				867C095B7BA2E4A53E95F430 /* main.m */,
+				DF79EB03F717B9E495F531DB /* VentoyMac.entitlements */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		C3E524811788963B729195E8 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				6CF5A5D7353CB3C5383C9CC6 /* VTBridge.h */,
+				E3BB10F5F69147769053E7B5 /* VTBridge.m */,
+				A3EF9E4A1942BC90E30F2789 /* VTLog.h */,
+				26C575FC5590EE71A6FC3A93 /* VTLog.m */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		E6F8C9D817AC7BA3398B3DFC /* XZ */ = {
+			isa = PBXGroup;
+			children = (
+				C738B740E0A8F27B69588C96 /* vtoy_xz.c */,
+				3A4F592B0EA63BF6602C8F7E /* vtoy_xz.h */,
+			);
+			path = XZ;
+			sourceTree = "<group>";
+		};
+		EBF720D50141A7E317D95216 /* Platform */ = {
+			isa = PBXGroup;
+			children = (
+				92FBCD5E93E67FE70AC2909A /* vtoy_darwin.c */,
+				B63044E9C6F06767D883039D /* vtoy_darwin.h */,
+			);
+			path = Platform;
+			sourceTree = "<group>";
+		};
+		EDC0A4150F1A213668567508 /* Ventoy */ = {
+			isa = PBXGroup;
+			children = (
+				A306F694EB64AC2A24D85C0E /* crc32.c */,
+				BF3E010AF511ED65FE5744C5 /* partresize.c */,
+				A6A4415BA5EADED70B56A130 /* vtoycli.c */,
+				D56389ABB6CAAB49C5C826BA /* vtoycli.h */,
+				0ABDE213222DE05E59331CDB /* vtoyfat.c */,
+				F01639446F9A175638B1D643 /* vtoygpt.c */,
+			);
+			path = Ventoy;
+			sourceTree = "<group>";
+		};
+		F31518FA932985934195CB76 /* GUI */ = {
+			isa = PBXGroup;
+			children = (
+				F0091BC45119AF25D2D3E8B1 /* MainWindowController.h */,
+				C7691A5EA23E8A415A91A7E7 /* MainWindowController.m */,
+				3C8B8E437C0C95CDC0104B8C /* VTDriveCell.h */,
+				3B2848FF36A646C3ABC27EFF /* VTDriveCell.m */,
+			);
+			path = GUI;
+			sourceTree = "<group>";
+		};
+		F4415B8B891A5FF61C91EEC9 /* Monitor */ = {
+			isa = PBXGroup;
+			children = (
+				7213C8195202E3E73016BE55 /* VTDiskMonitor.h */,
+				F6922E7F5F9165ED2B4061F9 /* VTDiskMonitor.m */,
+			);
+			path = Monitor;
+			sourceTree = "<group>";
+		};
+		F56A65C70E9028F23306BDA2 /* FatIO */ = {
+			isa = PBXGroup;
+			children = (
+				68221256428996D2BFE5A609 /* fat_access.c */,
+				A755FDED9C87B73C25D1B044 /* fat_cache.c */,
+				0C2A4547E0FB7477808B8527 /* fat_filelib.c */,
+				F24624D436A1B72FF8A08336 /* fat_format.c */,
+				F6794F49A182B7B368370E66 /* fat_misc.c */,
+				B4800099737538A6D9A47E1C /* fat_string.c */,
+				909EFB7631E3AC8AFE7BA30A /* fat_table.c */,
+				7B7529AF1F2739B824DB9A0D /* fat_write.c */,
+				6EB6D7A6EA5194B48C1A7D41 /* include */,
+			);
+			path = FatIO;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0D4B3291B0D48726DBD1A668 /* VentoyMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 600FDB67F01946EDC26C219C /* Build configuration list for PBXNativeTarget "VentoyMac" */;
+			buildPhases = (
+				A2B1F7C84693B684B4761D42 /* Sources */,
+				575AC5C412645997A645AB6C /* Copy Boot Assets */,
+				22F6C95BD57EE35FB4BE3E1A /* Resources */,
+				2A0C31A54673CA2054DAD6D5 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VentoyMac;
+			packageProductDependencies = (
+			);
+			productName = VentoyMac;
+			productReference = 1EF8DC62FAB3EC6465FB379F /* VentoyMac.app */;
+			productType = "com.apple.product-type.application";
+		};
+		28B05DDB4F04FFB705508130 /* VentoyMacTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 85D4BFA5CF777D75BF970376 /* Build configuration list for PBXNativeTarget "VentoyMacTests" */;
+			buildPhases = (
+				E0E60F2BCAA757DA08005F0A /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BFCE160A044D22597C784BF1 /* PBXTargetDependency */,
+			);
+			name = VentoyMacTests;
+			packageProductDependencies = (
+			);
+			productName = VentoyMacTests;
+			productReference = 91F7D2987CD211D0F8B5008D /* VentoyMacTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7BF3790D3A18A94EE4695D8B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					0D4B3291B0D48726DBD1A668 = {
+						DevelopmentTeam = LZ7T6LSFQ5;
+						ProvisioningStyle = Automatic;
+					};
+					28B05DDB4F04FFB705508130 = {
+						DevelopmentTeam = LZ7T6LSFQ5;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 60C991C5A2FA0E359794E973 /* Build configuration list for PBXProject "VentoyMac" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 591A7A9EED42BEF761D25E1E;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0D4B3291B0D48726DBD1A668 /* VentoyMac */,
+				28B05DDB4F04FFB705508130 /* VentoyMacTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		22F6C95BD57EE35FB4BE3E1A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				099F77279DB4F28824FA0A88 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		575AC5C412645997A645AB6C /* Copy Boot Assets */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Boot Assets";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "rsync -a --exclude .DS_Store \"${SRCROOT}/VentoyMac/Resources/ventoy_boot\" \"${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A2B1F7C84693B684B4761D42 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8754BED9AD3B05EBC0DE81E /* AppDelegate.m in Sources */,
+				B292571B814CD680CBA5CBBA /* MainWindowController.m in Sources */,
+				67E160351A1FBEEE8FBED519 /* VTBridge.m in Sources */,
+				9A9E980204ED1B33E40D08DE /* VTDiskMonitor.m in Sources */,
+				7FE011C9DF3834A03BCA9DD4 /* VTDiskOperations.m in Sources */,
+				FE5A8F819333B98583C76906 /* VTDriveCell.m in Sources */,
+				EBBE05398A8312FE0C03C5F7 /* VTLog.m in Sources */,
+				74F835FF6298B132730124A0 /* VTPrivilegedTask.m in Sources */,
+				F1755F9AFE34186751E93728 /* VTTypes.m in Sources */,
+				8FE5A08484D19A33C6E23734 /* crc32.c in Sources */,
+				231D75AE7B623CE6EF4F2564 /* fat_access.c in Sources */,
+				41F10584A64CDD3FE53DA6A8 /* fat_cache.c in Sources */,
+				A52223FC935289B7E32010BD /* fat_filelib.c in Sources */,
+				1E0AB606F282E34DEC789E4D /* fat_format.c in Sources */,
+				D32326D75921BC73C458D631 /* fat_misc.c in Sources */,
+				7D991320DECF64BE6A273094 /* fat_string.c in Sources */,
+				02BFC5CD9A424769CD0A07F3 /* fat_table.c in Sources */,
+				6298A683746C116E5AF2BB15 /* fat_write.c in Sources */,
+				22E3407E3413A75B6E08580D /* main.m in Sources */,
+				A49DE5E9BA2AF4DF028FFA02 /* partresize.c in Sources */,
+				5E5265816D6D55AFB2D519EA /* vtoy_darwin.c in Sources */,
+				A249A89713A44C2CE411AF7A /* vtoy_xz.c in Sources */,
+				8FC4D21A08924AFB8C7B0BDF /* vtoycli.c in Sources */,
+				B290DAE52923552886288BCA /* vtoyfat.c in Sources */,
+				538FCE3B8737140C6D449243 /* vtoygpt.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E0E60F2BCAA757DA08005F0A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8428E96E5C0E9B41240C5DD6 /* VTBridgeTests.m in Sources */,
+				DD8D510A1B226E7BEE8BC990 /* VTDiskSafetyTests.m in Sources */,
+				4690D80CD578F4562FEC6A62 /* VTPartitionTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BFCE160A044D22597C784BF1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0D4B3291B0D48726DBD1A668 /* VentoyMac */;
+			targetProxy = FE35F3673135D1E547BCE573 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		5D77C246486F800F4C1EF20D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		70E213F352D34C0C2566E09B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = LZ7T6LSFQ5;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/VentoyMac/Core/FatIO/include",
+					"$(SRCROOT)/VentoyMac/Core/Platform",
+					"$(SRCROOT)/VentoyMac/Core/Ventoy",
+					"$(SRCROOT)/VentoyMac/Bridge/Types",
+					"$(SRCROOT)/VentoyMac/Bridge/Monitor",
+					"$(SRCROOT)/VentoyMac/Bridge/Operations",
+					"$(SRCROOT)/VentoyMac/Bridge/Core",
+					"$(SRCROOT)/VentoyMac/GUI",
+					"$(SRCROOT)/VentoyMac/App",
+				);
+				INFOPLIST_FILE = VentoyMacTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = KNWS.VentoyMacTests;
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VentoyMac.app/Contents/MacOS/VentoyMac";
+			};
+			name = Debug;
+		};
+		87017B1D6F6B74D8318E361C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = LZ7T6LSFQ5;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/VentoyMac/Core/FatIO/include",
+					"$(SRCROOT)/VentoyMac/Core/Platform",
+					"$(SRCROOT)/VentoyMac/Core/Ventoy",
+					"$(SRCROOT)/VentoyMac/Bridge/Types",
+					"$(SRCROOT)/VentoyMac/Bridge/Monitor",
+					"$(SRCROOT)/VentoyMac/Bridge/Operations",
+					"$(SRCROOT)/VentoyMac/Bridge/Core",
+					"$(SRCROOT)/VentoyMac/GUI",
+					"$(SRCROOT)/VentoyMac/App",
+				);
+				INFOPLIST_FILE = VentoyMacTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = KNWS.VentoyMacTests;
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VentoyMac.app/Contents/MacOS/VentoyMac";
+			};
+			name = Release;
+		};
+		A501BA817486C058C47E7E50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "arm64 x86_64";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_ENTITLEMENTS = VentoyMac/App/VentoyMac.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = LZ7T6LSFQ5;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GCC_C_LANGUAGE_STANDARD = c11;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/VentoyMac/Core/FatIO/include",
+					"$(SRCROOT)/VentoyMac/Core/Platform",
+					"$(SRCROOT)/VentoyMac/Core/Ventoy",
+					"$(SRCROOT)/VentoyMac/Bridge/Types",
+					"$(SRCROOT)/VentoyMac/Bridge/Monitor",
+					"$(SRCROOT)/VentoyMac/Bridge/Operations",
+					"$(SRCROOT)/VentoyMac/Bridge/Core",
+					"$(SRCROOT)/VentoyMac/GUI",
+					"$(SRCROOT)/VentoyMac/App",
+				);
+				INFOPLIST_FILE = VentoyMac/App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				OTHER_CFLAGS = "$(inherited) -D_FILE_OFFSET_BITS=64 -DVENTOY_MAC_BUILD";
+				PRODUCT_BUNDLE_IDENTIFIER = KNWS.VentoyMac;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		D787442E67B5A8F7F82F6FB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "arm64 x86_64";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_ENTITLEMENTS = VentoyMac/App/VentoyMac.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = LZ7T6LSFQ5;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GCC_C_LANGUAGE_STANDARD = c11;
+				GCC_OPTIMIZATION_LEVEL = s;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/VentoyMac/Core/FatIO/include",
+					"$(SRCROOT)/VentoyMac/Core/Platform",
+					"$(SRCROOT)/VentoyMac/Core/Ventoy",
+					"$(SRCROOT)/VentoyMac/Bridge/Types",
+					"$(SRCROOT)/VentoyMac/Bridge/Monitor",
+					"$(SRCROOT)/VentoyMac/Bridge/Operations",
+					"$(SRCROOT)/VentoyMac/Bridge/Core",
+					"$(SRCROOT)/VentoyMac/GUI",
+					"$(SRCROOT)/VentoyMac/App",
+				);
+				INFOPLIST_FILE = VentoyMac/App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				OTHER_CFLAGS = "$(inherited) -D_FILE_OFFSET_BITS=64 -DVENTOY_MAC_BUILD";
+				PRODUCT_BUNDLE_IDENTIFIER = KNWS.VentoyMac;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		EEE01290C285D55ECBCA7D45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		600FDB67F01946EDC26C219C /* Build configuration list for PBXNativeTarget "VentoyMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A501BA817486C058C47E7E50 /* Debug */,
+				D787442E67B5A8F7F82F6FB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		60C991C5A2FA0E359794E973 /* Build configuration list for PBXProject "VentoyMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEE01290C285D55ECBCA7D45 /* Debug */,
+				5D77C246486F800F4C1EF20D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		85D4BFA5CF777D75BF970376 /* Build configuration list for PBXNativeTarget "VentoyMacTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70E213F352D34C0C2566E09B /* Debug */,
+				87017B1D6F6B74D8318E361C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7BF3790D3A18A94EE4695D8B /* Project object */;
+}

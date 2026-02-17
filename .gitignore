@@ -1,0 +1,13 @@
+# macOS
+.DS_Store
+
+# Xcode build artifacts
+VentoyMac/build/
+DerivedData/
+*.xcuserdata
+xcuserdata/
+
+# Compiled objects
+*.o
+*.a
+!VentoyMac/VentoyMac/Core/FatIO/libfat_io.a
