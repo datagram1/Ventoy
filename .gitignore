@@ -1,0 +1,4 @@
+
+# Xcode build output (regenerable)
+VentoyMac/build/
+*.dSYM/
